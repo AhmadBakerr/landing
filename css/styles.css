@@ -154,3 +154,44 @@ section.your-active-class .landing__container::after {
     border-radius: 5px;
     cursor: pointer;
 }
+.navbar__menu .menu__link.active-link {
+    background-color: red; /* Change this to any color you prefer */
+    color: #fff;
+}
+/* Make navigation responsive */
+.navbar__menu ul {
+    text-align: center;
+}
+
+/* Make the navigation links display vertically on small screens */
+@media only screen and (max-width: 768px) {
+    .navbar__menu ul {
+        display: block;
+    }
+
+    .navbar__menu li {
+        display: block;
+        text-align: center;
+    }
+
+    .navbar__menu .menu__link {
+        padding: 1em;
+        font-size: 1.2em;
+    }
+}
+
+/* Ensure the sections are responsive */
+@media only screen and (max-width: 768px) {
+    .landing__container {
+        padding: 2em;
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
