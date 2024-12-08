@@ -61,31 +61,8 @@ function hideNavbarWhileIdle() {
     }, 3000);
 }
 
-sections.forEach((section) => {
-    const header = section.querySelector('h2');
-    header.style.cursor = 'pointer';
-
-    header.addEventListener('click', () => {
-        const content = section.querySelector('.landing__container');
-        const isCollapsed = content.style.display === 'none';
-
-        content.style.display = isCollapsed ? 'block' : 'none';ى
-    });
-});
-
 document.addEventListener('scroll', () => {
     setActiveSection();
     handleScrollToTopButton();
     hideNavbarWhileIdle();
 });
-
-scrollToTopButton.style.display = 'none';
-scrollToTopButton.style.position = 'fixed';
-scrollToTopButton.style.bottom = '20px';
-scrollToTopButton.style.right = '20px';
-scrollToTopButton.style.backgroundColor = '#333';
-scrollToTopButton.style.color = '#fff';
-scrollToTopButton.style.padding = '10px 15px';
-scrollToTopButton.style.border = 'none';
-scrollToTopButton.style.borderRadius = '5px';
-scrollToTopButton.style.cursor = 'pointer';
